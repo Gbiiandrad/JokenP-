@@ -59,6 +59,10 @@ p{
     margin-bottom: 2px;
 }
 
+.result{
+    font-size: 40px;
+}
+
 .your-score span{
     color: rgb(77, 128, 216);
 }

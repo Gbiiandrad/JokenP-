@@ -5,6 +5,15 @@ const machinesScore = document.querySelector('#machine-score');
 
 let humanScoreNumber = 0;
 let machineScoreNumber = 0;
+
+
+const GAMER_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS: 'scissors'
+}
+
+
 //quando clicar chegar a informação
 // indentificar qual opção foi escolhido pelo o usuario
 const playHuman = (humanChoice) => {
@@ -13,7 +22,7 @@ const playHuman = (humanChoice) => {
 
 // opçao escolhida pelo o adversario
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = [GAMER_OPTIONS.ROCK, GAMER_OPTIONS.PAPER, GAMER_OPTIONS.SCISSORS];
     const randomNumber = Math.floor(Math.random() * 3);
 
     return choices[randomNumber];
@@ -27,9 +36,9 @@ const playTheGame = (human, machine) => {
     //Colocar a pontuação final de quem ganhou
     if (human === machine) {
         result.innerHTML = "Deu empate!";
-    } else if ((human === 'paper' && machine === 'rock') || 
-    (human === 'rock' && machine === 'scissors') || 
-    (human === 'scissors' && machine === 'paper')) {     
+    } else if ((human === GAMER_OPTIONS.PAPER && machine === GAMER_OPTIONS.ROCK) || 
+    (human === GAMER_OPTIONS.ROCK && machine === GAMER_OPTIONS.SCISSORS) || 
+    (human === GAMER_OPTIONS.SCISSORS && machine === GAMER_OPTIONS.PAPER)) {     
         humanScoreNumber ++
         humanScore.innerHTML = humanScoreNumber;
         result.innerHTML = "Você Ganhou!";

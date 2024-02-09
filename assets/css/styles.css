@@ -1,5 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+.btn-game {
+  display: flex;
+  margin: 30px 0;
+  gap: 40px;
+}
+
+button {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn-game button:hover {
+  opacity: 0.7;
+}
+
+#rock {
+  background-color: #a200ff;
+}
+
+#paper {
+  background-color: #9ee01a;
+}
+
+#scissors {
+  background-color: #7dbeed;
+}
+
+p{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.your-score span{
+    color: rgb(77, 128, 216);
+}
+
+.machine-score span{
+    color: rgb(224, 71, 15);
 }
